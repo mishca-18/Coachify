@@ -6,13 +6,13 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
+  output   = "../prisma/generated/client"
 }
-
 datasource db {
-  provider = "postgresql"
+  provider = "postgresql" // Adjust to your database
   url      = env("DATABASE_URL")
 }
+// Your models remain unchanged
 
 model User {
   id              String           @id @default(uuid())
